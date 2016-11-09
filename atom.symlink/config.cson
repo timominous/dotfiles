@@ -1,35 +1,43 @@
 "*":
-  "autocomplete-plus": {}
-  core: {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "10c2fa63-cdd9-493d-ab86-11e905220ddc"
+    js:
+      beautify_on_save: true
+      brace_style: "collapse-preserve-inline"
+      indent_size: 2
+  "atom-material-ui":
+    tabs: {}
+    treeView: {}
+    ui: {}
+  "atom-terminal":
+    app: "iTerm.app"
+  "clang-format": {}
+  core:
+    automaticallyUpdate: false
+    openEmptyEditorOnStart: false
+    projectHome: "/Users/timominous/Projects"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
   editor:
-    fontFamily: "DejaVu Sans Mono for Powerline"
-    fontSize: 12
+    fontFamily: "FiraCode-Light"
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 120
+    showIndentGuide: true
     softTabs: true
-    tabLength: 4
+    tabLength: 2
   "exception-reporting":
-    userId: "b5e9ed16-683d-9615-f4cd-77c5567599d2"
+    userId: "936fc3be-3833-4dc4-11ae-4229a87b190d"
   linter:
     lintOnFly: false
-  "linter-flake8":
-    executableDir: "/usr/local/bin"
-    maxLineLength: 80
-  metrics:
-    userId: "95a75129e47eb92c43bf3fb61f5bc320ceb00be2"
-  "release-notes":
-    viewedVersion: "0.81.0"
+  "linter-jshint":
+    esversion: 6
+    executablePath: "/Users/timominous/.nvm/versions/node/v6.3.0/bin/jshint"
+  "one-dark-ui": {}
   "tree-view":
     hideVcsIgnoredFiles: true
-  "vim-mode": {}
   welcome:
     showOnStartup: false
-  whitespace: {}
-".ruby.source":
-  editor:
-    preferredLineLength: 120
-    tabLength: 2
-".source.yaml":
-  editor:
-    preferredLineLength: 120
-    tabLength: 2

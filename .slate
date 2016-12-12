@@ -1,0 +1,55 @@
+# Configs
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Abstract positions
+
+alias full         move screenOriginX;screenOriginY                screenSizeX;screenSizeY
+alias lefthalf     move screenOriginX;screenOriginY                screenSizeX/2;screenSizeY
+alias righthalf    move screenOriginX+screenSizeX/2;screenOriginY  screenSizeX/2;screenSizeY
+alias topleft      corner top-left                                 resize:screenSizeX/2;screenSizeY/2
+alias topright     corner top-right                                resize:screenSizeX/2;screenSizeY/2
+alias bottomleft   corner bottom-left                              resize:screenSizeX/2;screenSizeY/2
+alias bottomright  corner bottom-right                             resize:screenSizeX/2;screenSizeY/2
+alias center       move screenOriginX+((screenSizeX-newWindowSizeX)/2);screenOriginY+((screenSizeY-newWindowSizeY)/2)                screenSizeX*0.9;screenSizeY*0.9
+
+# Applications
+
+alias browser 'Safari'
+alias terminal 'iTerm2'
+alias javascript 'WebStorm'
+alias xcode 'Xcode'
+alias slack 'Slack'
+alias telegram 'Telegram'
+alias messages 'Messages'
+alias scm 'SourceTree'
+alias atom 'Atom'
+
+# Hyper key
+
+alias hyper ctrl;shift;alt;cmd
+
+# Bindings
+
+bind f:${hyper} ${full}
+bind l:${hyper} ${lefthalf}
+bind r:${hyper} ${righthalf}
+bind y:${hyper} ${topleft}
+bind u:${hyper} ${topright}
+bind b:${hyper} ${bottomleft}
+bind n:${hyper} ${bottomright}
+bind c:${hyper} ${center}
+
+## App bindings
+# These are laid out on the left hand
+bind t:${hyper} focus ${terminal}
+bind s:${hyper} focus ${browser}
+bind x:${hyper} focus ${xcode}
+bind j:${hyper} focus ${javascript}
+bind w:${hyper} focus ${slack}
+bind m:${hyper} focus ${messages}
+bind g:${hyper} focus ${telegram}
+bind e:${hyper} focus ${scm}
+bind a:${hyper} focus ${atom}

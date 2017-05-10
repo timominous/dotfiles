@@ -1,0 +1,33 @@
+#!/usr/bin/env python
+
+import sys
+import re
+import unicodedata as uni
+
+commit_msg_filepath = sys.argv[1]
+commit_msg_file = open(commit_msg_filepath)
+
+commit_msg = commit_msg_file.readline()
+
+commit_msg_file.close()
+
+# BEGIN: EMOJITAG
+regex = re.compile(r'\[(.*?)\]')
+
+matches = regex.findall(commit_msg)
+
+found_emoji_tag = False
+
+for match in matches:
+    if commit_msg.find(match) == 1:
+        try:
+            match.decode('ascii')
+        except:
+            found_emoji_tag = True
+
+if found_emoji_tag == False:
+    print >> sys.stderr, 'You need to tag your commit with the appropriate Emoji'
+    sys.exit(1)
+# END: EMOJITAG
+
+sys.exit(0)

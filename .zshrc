@@ -6,7 +6,7 @@ COMPLETION_WAITING_DOTS="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git)
+plugins=(git fasd z)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 

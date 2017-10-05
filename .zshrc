@@ -19,6 +19,8 @@ alias dsubs="addic7ed -l english"
 
 alias flattendir="find . -mindepth 1 -type f -exec mv '{}' . ';'"
 
+alias renametvshowsindir="filebot -rename * --format \"{n} - {s00e00} - {t}\" --db TheTVDB -non-strict"
+
 # FASD
 
 eval "$(fasd --init auto)"
@@ -58,7 +60,7 @@ if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
     source ~/.gnupg/.gpg-agent-info
     export GPG_AGENT_INFO
 else
-    eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+    eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
 fi
 
 # Load SSH keys here

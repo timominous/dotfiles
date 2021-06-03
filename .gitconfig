@@ -9,7 +9,13 @@
 [user]
 	name = Tim Duhaylungsod
 	email = timominous@gmail.com
+	signingkey = 5B2595837890762C
 [gpg]
 	program = /usr/local/bin/gpg
 [commit]
 	gpgsign = true
+	template = /Users/timominous/.stCommitMsg
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
